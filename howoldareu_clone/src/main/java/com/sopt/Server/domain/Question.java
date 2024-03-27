@@ -13,6 +13,6 @@ public class Question {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long questionId;
     private String questionContent;
-    @OneToMany(mappedBy = "answer")
+    @OneToMany(mappedBy = "question")
     private List<Answer> answers = new ArrayList<>();
 }
