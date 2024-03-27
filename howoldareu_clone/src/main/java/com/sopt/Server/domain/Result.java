@@ -19,12 +19,9 @@ public class Result{
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "result_id")
     private Long id;
-
     @ManyToOne
     private Member member;
-
     private int resultAge;
-
     @CreatedDate
     private LocalDateTime testedDate;
 }
