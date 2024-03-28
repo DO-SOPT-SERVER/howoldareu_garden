@@ -62,8 +62,7 @@ public class ResultService {
         //멤버의 result 모두 갖고옴 이것을 각각의 result마다 allresultsresponsedto만들어야 해
         for(Result result : resultList) {
             AgeEnum ageEnum = getAgeEnum(result.getResultAge());
-            String time = getStringDate(result.getTestedDate());
-            AllResultsResponseDTO dto = AllResultsResponseDTO.of(result, ageEnum.getTitle(), ageEnum.getContent(), time, ageEnum.getImageUrl1(), ageEnum.getImageUrl2());
+            AllResultsResponseDTO dto = AllResultsResponseDTO.of(result, ageEnum);
             answer.add(dto);
         }
 
